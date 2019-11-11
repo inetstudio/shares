@@ -1,0 +1,33 @@
+{
+  "name": "inetstudio/shares",
+  "description": "Package for shares",
+  "homepage": "https://github.com/inetstudio/shares",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Konstantin Bukin",
+      "email": "bukin@inetstudio.ru"
+    }
+  ],
+  "require": {
+    "inetstudio/admin-panel": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "InetStudio\\SharesPackage\\": "package/src",
+      "InetStudio\\SharesPackage\\Shares\\": "entities/shares/src",
+      "InetStudio\\SharesPackage\\Users\\": "entities/users/src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "InetStudio\\SharesPackage\\Providers\\ServiceProvider",
+        "InetStudio\\SharesPackage\\Shares\\Providers\\BindingsServiceProvider",
+        "InetStudio\\SharesPackage\\Shares\\Providers\\ServiceProvider",
+        "InetStudio\\SharesPackage\\Users\\Providers\\BindingsServiceProvider",
+        "InetStudio\\SharesPackage\\Users\\Providers\\ServiceProvider"
+      ]
+    }
+  }
+}
