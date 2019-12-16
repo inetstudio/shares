@@ -16,6 +16,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <div class="ibox-tools">
+                            <a href="{{ route('back.shares-package.shares.export') }}" class="btn btn-primary btn-sm">Экспорт</a>
+                        </div>
+                    </div>
                     <div class="ibox-content">
                         <div class="table-responsive">
                             {{ $table->table(['class' => 'table table-striped table-bordered table-hover dataTable']) }}

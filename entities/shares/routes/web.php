@@ -9,8 +9,11 @@ Route::group(
         'prefix' => 'back/shares-package',
     ],
     function () {
-        Route::any('shares-package/shares/data/index', 'DataControllerContract@getIndexData')
+        Route::any('shares/data/index', 'DataControllerContract@getIndexData')
             ->name('back.shares-package.shares.data.index');
+
+        Route::get('shares/export', 'ExportControllerContract@exportItems')
+            ->name('back.shares-package.shares.export');
 
         Route::resource(
             'shares', 'ResourceControllerContract',
